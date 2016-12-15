@@ -18,7 +18,7 @@ docker run --rm -it -v /path/to/weechat:/home/user/.weechat --name weechat craig
 
 ## Pre-configured weechat
 
-If you want to use a pre-configured weechat...
+If you want to use a pre-configured weechat, follow these steps:
 
 1. Clone the weechat configuration repo:
 

@@ -4,13 +4,13 @@
 FROM        alpine:latest
 MAINTAINER  Craig Hurley
 
-RUN         apk update \
-            && apk add weechat weechat-perl weechat-python weechat-aspell aspell-en ncurses \
-            && rm -rf /var/cache/apk/*
-
 ENV         LANG C.UTF-8
 ENV         TERM xterm-256color
 ENV         HOME /home/user
+
+RUN         apk update \
+            && apk add weechat weechat-perl weechat-python weechat-aspell aspell-en ncurses \
+            && rm -rf /var/cache/apk/*
 
 RUN         adduser -D -h $HOME user \
             && mkdir -p $HOME/.weechat \

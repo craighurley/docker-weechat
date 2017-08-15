@@ -1,16 +1,23 @@
 # Run weechat in a container
 # docker run --rm -it -v /src/.weechat:/home/user/.weechat --name weechat craighurley/docker-weechat
 
-FROM        alpine:latest
+FROM        alpine:edge
 MAINTAINER  Craig Hurley
 
 ENV         LANG C.UTF-8
 ENV         TERM xterm-256color
 ENV         HOME /home/user
 
-RUN         apk update \
-            && apk add weechat weechat-perl weechat-python weechat-aspell aspell-en ncurses \
-            && rm -rf /var/cache/apk/*
+RUN         apk add --no-cache \
+                weechat \
+                weechat-perl \
+                weechat-python \
+                weechat-aspell \
+                ca-certificates \
+                aspell-en \
+                ncurses \
+                python \
+                perl
 
 RUN         adduser -D -h $HOME user \
             && mkdir -p $HOME/.weechat \

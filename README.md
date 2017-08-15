@@ -16,6 +16,12 @@ Run the container and mount a local directory:
 docker run --rm -it -v /path/to/weechat:/home/user/.weechat --name weechat craighurley/docker-weechat
 ```
 
+If you use SELinux, this works for me:
+
+```
+docker run --rm -it -u $(id -u):$(id -u) -v /path/to/weechat:/home/user/.weechat:z --name weechat craighurley/docker-weechat
+```
+
 ## Pre-configured weechat
 
 If you want to use a pre-configured weechat, follow these steps:

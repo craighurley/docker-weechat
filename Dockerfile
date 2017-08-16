@@ -1,5 +1,5 @@
 # Run weechat in a container
-# docker run --rm -it -v /src/.weechat:/home/user/.weechat --name weechat craighurley/docker-weechat
+# docker run --rm -it -v ~/.weechat:/home/user/.weechat craighurley/docker-weechat
 
 FROM        alpine:edge
 MAINTAINER  Craig Hurley

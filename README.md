@@ -16,6 +16,11 @@ Run the container and mount a local directory:
 docker run --rm -it -v ~/.weechat:/home/user/.weechat craighurley/docker-weechat
 ```
 
+To set up a timezone:
+```
+docker run --rm -it -e TZ="America/Los_Angeles" -v ~/.weechat:/home/user/.weechat craighurley/docker-weechat
+```
+
 If you use SELinux, this works for me:
 
 ```

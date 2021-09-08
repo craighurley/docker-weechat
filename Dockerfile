@@ -13,6 +13,7 @@ RUN         apk add --no-cache \
                 weechat-perl==2.5-r0 \
                 weechat-python==2.5-r0 \
                 weechat-spell==2.5-r0 \
+                tzdata \
                 ca-certificates \
                 aspell-en \
                 ncurses \
